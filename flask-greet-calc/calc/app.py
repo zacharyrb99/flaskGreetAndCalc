@@ -12,8 +12,8 @@ OPERATIONS = {
 
 @app.route("/math/<operation>")
 def math(operation):
-    a = int(request.args.get("a"))
-    b = int(request.args.get("b"))
+    a = int(request.args["a"])
+    b = int(request.args["b"])
     answer = OPERATIONS[operation](a,b)
 
     return str(answer)
